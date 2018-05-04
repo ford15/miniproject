@@ -1,0 +1,25 @@
+﻿[
+{"First Name":"Satyajit",
+"Last name":"Rout",
+"Designation":"Program Manager",
+"Count":"India",
+"Location":"Bangalore",
+"phone":"XXX",
+"Email id":"Satyajit.rout@capgemini.com",
+"Practice":"I&D",
+"Division":"Microsoft",
+"Sub practice":"Microsoft",
+"Skill":"Azure,powerBI"},
+
+{"First Name":"Moupiya ",
+"Last name":"Das", 
+"Designation":"Manager",
+"Count":"India",
+"Location":"Bangalore",
+"phone":"XXX",
+"Email id":"moupiya.das@capgemini",
+"Practice":"I&D",
+"Division":"Microsoft",
+"Sub practice":"Microsoft",
+"Skill":"Azure,Power BI"}
+]
