@@ -1,0 +1,154 @@
+﻿[
+{
+"Service Line":"Microsoft",
+"Asset Name":"Enterprise Site Provisioning & Management Framework",
+Brief Description:"Enterprise Site Provisioning & Management Frameworkwhich Supports diversity of program needs, loads, constraints, etc.- A realistic and robust enterprise Site Provisioning & Management platform - “Up” and “out” scalability is baked-in, yet manageable - Relevant industry best practices and patterns applied - Specialize processing roles and responsibilities - Loosely couple components with abstractions, patterns“Non-FTC” compliance with all components",
+"Type":"Enabler/Framwork",
+"Owner":"Mehrotra,Ravi/Samal,Ashutosh",
+"List of account(s) where it is leveraged":"Ernst & Young"
+},
+
+{
+"Service Line":"Microsoft",
+"Asset Name":"Lotus Notes to SharePoint Migration Process Framework",
+"Brief Description":"Lotus Notes to SharePoint Migration Process Framework",
+"Type":"Enabler/Framwork",
+"Owner":"Mehrotra, Ravi/Samal, Ashutosh",
+"List of account(s) where it is leveraged":"Ernst & Young/RBC"
+},
+
+{
+"Service Line":"Microsoft",
+"Asset Name":"SharePoint 2010 Windows Classic to Claims Conversion",
+"Brief Description":"This document describes the steps to convert a SharePoint 2010 web application from Windows Classic to Claims conversion. The document covers the script along with the steps to be performed post conversion along with troubleshooting the error.",
+"Type":"Solution",
+"Owner":"Khodiar, Hiren/Samal, Ashutosh",
+"List of account(s) where it is leveraged":"Warner Bros."
+},
+
+{
+"Service Line":"Microsoft",
+"Asset Name":"Use of PowerShell in Provisioning SharePoint Site collections",
+"Brief Description":"The document has the details of configuration of PowerShell to connect to O365 services and the steps to provision the site collections using PowerShell in SharePoint online.",
+"Type":"Solution",
+"Owner":"Badagabettu, Sudheendra/Samal, Ashutosh",
+"List of account(s) where it is leveraged":"NATS"
+},
+
+{
+"Service Line":"Microsoft",
+"Asset Name":"Update Site Secondary Owner in SharePoint online",
+"Brief Description":"This Power Shell script is ued update the old/existing my-sites in SharePoint online.",
+"Type":"Solution",
+"Owner":"Badagabettu, Sudheendra/Samal, Ashutosh",
+"List of account(s) where it is leveraged":"EY/NATS"
+},
+
+{
+"Service Line":"Microsoft",
+"Asset Name":"SharePoint List Threshold limit",
+"Brief Description":"Managing SharePoint large lists which exceeds Threshold limit​",
+"Type":"Best Practice",
+"Owner":"Nanda, Subhashree/Samal, Ashutosh",
+"List of account(s) where it is leveraged":"BUPA"
+},
+
+{
+"Service Line":"Microsoft",
+"Asset Name":"APS- Health  Advisor ",
+"Brief Description":"This Solution scan the existing APS environment and report the data skew , improper or missing clusterd column store index , older statistics ,  top costly queries ,  maxixmum data  movement during query execution etc. ",
+"Type":"Solution",
+"Owner":"Suman Chandra/Daniel, Pramodh",
+"List of account(s) where it is leveraged":"Sandvik, Lincolnshire county council"
+},
+
+{
+"Service Line":"Microsoft",
+"Asset Name":"APS - Migration Advisor ",
+"Brief Description":"This accellerator will scan all SQL Server database objects and ditect if the object is compatible for migration or need any modification ",
+"Type":"Accelerator",
+"Owner":"Suman Chandra/Daniel, Pramodh",
+"List of account(s) where it is leveraged":"Sandvik, Lincolnshire county council"
+},
+
+{
+"Service Line":"Microsoft",
+"Asset Name":"SSIS Framework",
+"Brief Description":"Provides a common control and metadata layer to SSIS that integrates a project’s ETL load activities and reduces development time significantly ",
+"Type":"Accelerator",
+"Owner":"Suman Chandra/Daniel, Pramodh",
+"List of account(s) where it is leveraged":"Multiple MS accounts"
+},
+
+{
+"Service Line":"Microsoft",
+"Asset Name":"SSIS Documenter",
+"Brief Description":"This will help to create Design document for existing SSIS code. This  will reduce reverse engineering effort",
+Type:"Accelerator",
+"Owner":"Suman Chandra/Daniel, Pramodh",
+"List of account(s) where it is leveraged":"Multiple MS accounts"
+},
+
+{
+"Service Line":"Microsoft",
+"Asset Name":"One Click Multiple SSIS Package Modifier",
+"Brief Description":"Utility that would help in modifying/analyzing multiple SSIS packages in one-go. Key features:
+- Adding Variables to many packages
+- Adding/Modyfing Connection Manager to many packages
+- Changing path of configuration file
+- Reterive all the SQL queries from all the packages",
+"Type":"Accelerator",
+"Owner":"Suman Chandra/Daniel, Pramodh",
+"List of account(s) where it is leveraged":"Multiple MS accounts"
+},
+
+{
+"Service Line":"Microsoft",
+"Asset Name":"APS - Multiple Table Data Loading ",
+"Brief Description":"Utility to load multiple data into the APS/PDW Appliance from flat files. Ideal for migrating data from SQL Server to APS/PDW",
+"Type":"Accelerator",
+"Owner":"Suman Chandra/Daniel, Pramodh",
+"List of account(s) where it is leveraged":"Shurgard, Lansforsakringer , Sandvik, PostNrord"
+},
+
+{
+"Service Line":"Microsoft",
+"Asset Name":"Master Data Processor",
+"Brief Description":"Metadata driven Master Data Processor which is capable to handle typical deduplication/matching/merging scenarios using Microsoft technologies",
+"Type":"Solution",
+"Owner":"Suman Chandra/Daniel, Pramodh",
+"List of account(s) where it is leveraged":"Serco /Lincolnshire county council/ Peterborough  County/ Aberdeen  County"
+},
+
+{
+"Service Line":"Microsoft",
+"Asset Name":"Any On-Prem to Azure DB data offload",
+"Brief Description":"Framwork, approach for modernizing data migration approach from any Database to Azure DB",
+"Type":"Enabler/Framwork",
+"Owner":"Suman Chandra/Daniel, Pramodh",
+"List of account(s) where it is leveraged":"Rockwell, Lloyds Registrar, Shurgard"
+},
+
+{
+"Service Line":"Microsoft",
+"Asset Name":"SharePoint Integration with SSIS ETL",
+"Brief Description":"Scirprts and process to integrate all SSIS Packages running status in SharePoint where for any job fails, even end user can run the job. No need to have knowledge of SQL Server SSIS to rerun any failed job or check status of Pending/Successful jobs",
+"Type":"Accelerator",
+"Owner":"Moupiya Das",
+"List of account(s) where it is leveraged":"PSA"
+},
+
+{
+"Service Line":"Microsoft",
+"Asset Name":"Automation of Azure Data Factory pipeline creation",
+"Brief Description":"A framework to migrate/ Replication Data between on-prem source to any Azure DB/DW/Lake
+Built on Metadata-driven rapid platform migration framework
+Auto creation of Azure Data Factory Pipelines through ARM templates
+Flexible, extensible & reusable hybrid architecture
+",
+"Type":"Enabler/Framwork",
+"Owner":"Pushpa Gupta",
+"List of account(s) where it is leveraged":"Willis Towers Watson"
+}
+
+]
