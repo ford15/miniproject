@@ -1,0 +1,221 @@
+var restify = require('restify');
+var builder = require('botbuilder');
+var read = require('jsonfile');
+var tolower=require('to-lower-case');
+
+var contents = read.readFileSync('lead.json');
+
+var StoreFName;
+var StoreLName;
+var StoreDesignation;
+var StoreCountry;
+var StorePhone;
+var StoreLocation;
+var StoreEmailid;
+var StoreDivision;
+var StoreSubPractice;
+var StorePractice;
+var StoreSkill;
+var locationEntity;
+var designationEntity;
+var divisionEntity;
+
+
+
+// Setup Restify Server
+var server = restify.createServer();
+server.listen(process.env.port || process.env.PORT || 3838, function () {
+   console.log('%s listening to %s', server.name, server.url); 
+});
+
+// Create chat connector for communicating with the Bot Framework Service
+var connector = new builder.ChatConnector({
+    appId: process.env.MicrosoftAppId,
+    appPassword: process.env.MicrosoftAppPassword
+});
+
+// Listen for messages from users 
+server.post('/api/messages', connector.listen());
+
+// This is a dinner reservation bot that uses a waterfall technique to prompt users for input.
+var bot = new builder.UniversalBot(connector);
+const LuisModelUrl='https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/67e65140-e094-4e30-9def-f7854413d404?subscription-key=7488942c87594eccbf5738afcdd38187&verbose=true&timezoneOffset=0&q='
+
+var recognizer = new builder.LuisRecognizer(LuisModelUrl);
+var intents = new builder.IntentDialog({ recognizers: [recognizer] })
+
+
+/*.matches('getDetailsByLocation', function(session,args){
+ locationEntity = builder.EntityRecognizer.findEntity(args.entities,'Location');
+console.log(locationEntity.entity);
+for(var i=0;i<contents.length;i++)
+	{
+		
+		console.log((contents[i].Location));
+		if(locationEntity.entity==tolower(contents[i].Location))
+		{
+			//console.log(locationEntity.entity+'#');
+			session.send(contents[i].FirstName+' '+contents[i].LastName);
+			
+		}
+	}
+// session.beginDialog('getDetailsByLocation');
+
+})*/
+
+
+.matches('getDetailsbyDesigLoc', function(session,args,args1){
+designationEntity=builder.EntityRecognizer.findEntity(args.entities,'Designation');
+ locationEntity = builder.EntityRecognizer.findEntity(args1.entities,'Location');
+
+console.log(designationEntity.entity);
+for(var i=0;i<contents.length;i++)
+	{
+		
+		//console.log((contents[i].Division));
+		if(designationEntity.entity==tolower(contents[i].Designation) && locationEntity.entity==tolower(contents[i].Location) )
+		{
+			console.log(designationEntity.entity);
+			session.send(contents[i].FirstName+'-'+contents[i].LastName);
+			
+		}
+	}
+	
+// session.beginDialog('getDetailsByLocation');
+
+})
+
+/*function GetDetailsbyDiv(session)
+{
+	for(var i=0;i<contents.length;i++)
+	{
+		
+		//console.log((contents[i].Division));
+		if(designationEntity.entity==tolower(contents[i].Designation) && locationEntity.entity==tolower(contents[i].Location) )
+		{
+			//console.log(divisionEntity.entity);
+			session.send(contents[i].FirstName+'-'+contents[i].LastName);
+			
+		}
+	}
+}
+*/
+
+/*.matches('None', function(session,args){
+
+ session.send("Sorry I didn't understand.");
+	
+
+
+})*/
+
+
+
+/*function GetDetailsbyLoc(session,args)
+{
+	for(var i=0;i<contents.length;i++)
+	{
+		
+		if(args.entity==tolower(contents[i].Location))
+		{
+			session.send(" Name : " +contents[i].FirstName+' '+contents[i].LastName);
+			
+			
+		}
+	}
+}
+*/
+
+/*
+matches('getDetailsByLocation', function(session,args){
+ locationEntity = builder.EntityRecognizer.findEntity(args.entities, 'Location');
+ console.log(locationEntity.entity);
+ session.beginDialog('getDetails');
+	*/
+
+/*
+})
+
+.matches('getDetailsbyDivision', function(session,args){
+ divisionEntity = builder.EntityRecognizer.findEntity(args.entities, 'Division');
+ session.beginDialog('getDetails1');
+	
+
+
+})
+
+*/
+
+/*bot.dialog('getDetailsByLocation',function(session){
+	console.log(locationEntity.entity+'*');
+		
+	GetDetailsbyLoc(session,locationEntity);
+
+})*/
+
+/*bot.dialog('getDetails1',function(session){
+	//console.log(divisionEntity.entity+'*');
+	GetDetailsbyDiv(session,divisionEntity);
+
+})
+
+bot.dialog('getDetails2',function(session){
+	//console.log(designationEntity.entity+'*');
+	GetDetailsbyDesigLoc(session,locationEntity,designationEntity);
+
+})
+*/
+/*function GetDetailsbyLoc(session,args)
+{
+	for(var i=0;i<contents.length;i++)
+	{
+		
+		console.log((contents[i].Location));
+		if(locationEntity.entity==tolower(contents[i].Location))
+		{
+			//console.log(locationEntity.entity+'#');
+			session.send(contents[i].FirstName+' '+contents[i].LastName);
+			
+		}
+	}
+}*/
+
+/*function GetDetailsbyDiv(session)
+{
+	for(var i=0;i<contents.length;i++)
+	{
+		
+		//console.log((contents[i].Division));
+		if(divisionEntity.entity==tolower(contents[i].Division))
+		{
+			//console.log(divisionEntity.entity);
+			session.send(contents[i].FirstName+'-'+contents[i].LastName);
+			
+		}
+	}
+}
+function GetDetailsbyDiv(session)
+{
+	for(var i=0;i<contents.length;i++)
+	{
+		
+		//console.log((contents[i].Division));
+		if(designationEntity.entity==tolower(contents[i].Designation) && locationEntity.entity==tolower(contents[i].Location) )
+		{
+			//console.log(divisionEntity.entity);
+			session.send(contents[i].FirstName+'-'+contents[i].LastName);
+			
+		}
+	}
+}*/
+
+
+/*bot.dialog('getDetailsByLocation',function(session){		
+	
+	GetDetailsbyLoc(session,locationEntity);
+
+})*/
+
+bot.dialog('/',intents)
+
+
